@@ -25,7 +25,7 @@ def after_request(response):
     g.db.close()
     return response
 
-CORS(fit, origins=['http://localhost:3000'], supports_credentials=True)
+CORS(fit, origins=['http://localhost:3000', 'https://fitme-front-end.herokuapp.com'], supports_credentials=True)
 
 app.register_blueprint(fit, url_prefix='/fits')
 
